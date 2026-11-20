@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 6f;
-    public float jumpForce = 12f;
+    public float jumpForce = 14.5f;
 
     [Header("Ground Check")]
     public Transform groundCheck;
