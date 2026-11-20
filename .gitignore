@@ -127,3 +127,19 @@ Thumbs.db
 [Uu]ser[Ss]ettings/
 [Mm]emoryCaptures/
 [Rr]ecordings/
+
+# IDE & System Files
+.idea/
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini

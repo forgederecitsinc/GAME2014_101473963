@@ -113,3 +113,19 @@ InitTestScene*.unity*
 ._*
 .Spotlight-V100
 .Trashes
+
+# IDE & System Files
+.idea/
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
