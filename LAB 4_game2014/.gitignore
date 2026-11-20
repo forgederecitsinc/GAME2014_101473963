@@ -129,3 +129,10 @@ InitTestScene*.unity*
 Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
+
+# Screen recordings & large media files
+*.mov
+*.mp4
+*.mkv
+*.avi
+*.wmv

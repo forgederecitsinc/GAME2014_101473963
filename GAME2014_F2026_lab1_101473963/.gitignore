@@ -107,3 +107,10 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Screen recordings & large media files
+*.mov
+*.mp4
+*.mkv
+*.avi
+*.wmv
