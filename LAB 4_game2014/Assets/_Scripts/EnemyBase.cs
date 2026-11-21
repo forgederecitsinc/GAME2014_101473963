@@ -77,7 +77,11 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void OnHitPlayer(GameObject playerObj)
     {
-        // Base hook for damaging the player (extended in Lab 5 / Lab 6)
+        PlayerHealth health = playerObj.GetComponent<PlayerHealth>();
+        if (health != null)
+        {
+            health.TakeDamage(damage, transform.position);
+        }
     }
 
     protected virtual void OnDrawGizmosSelected()
