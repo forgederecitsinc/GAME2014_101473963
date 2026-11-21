@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     public float invulnerabilityTime = 1f;
     public float knockbackForce = 7f;
+
+    [Header("UI")]
+    public Slider healthSlider;
 
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
@@ -26,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerRespawn = GetComponent<PlayerRespawn>();
+        UpdateHealthUI();
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
@@ -61,7 +66,17 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(InvulnerabilityRoutine());
         }
 
+        UpdateHealthUI();
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+    }
+
+    private void UpdateHealthUI()
+    {
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currentHealth;
+        }
     }
 
     private IEnumerator InvulnerabilityRoutine()
