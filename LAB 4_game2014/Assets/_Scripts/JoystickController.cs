@@ -58,15 +58,15 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IDragHandl
                 player.SetJoystickInput(inputVector.x);
 
                 // Allow jumping by flicking the joystick up
-                if (inputVector.y > 0.65f && !upwardJumpTriggered)
-                {
-                    upwardJumpTriggered = true;
-                    player.OnJumpButton();
-                }
-                else if (inputVector.y < 0.3f)
-                {
-                    upwardJumpTriggered = false;
-                }
+                // if (inputVector.y > 0.65f && !upwardJumpTriggered)
+                // {
+                //     upwardJumpTriggered = true;
+                //     player.OnJumpButton();
+                // }
+                // else if (inputVector.y < 0.3f)
+                // {
+                //     upwardJumpTriggered = false;
+                // }
             }
         }
     }
