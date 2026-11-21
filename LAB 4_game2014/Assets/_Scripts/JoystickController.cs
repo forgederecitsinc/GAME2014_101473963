@@ -12,7 +12,6 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IDragHandl
     public PlayerController player;
 
     private Vector2 inputVector = Vector2.zero;
-    private bool upwardJumpTriggered = false;
 
     void Start()
     {
@@ -74,7 +73,6 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IDragHandl
     public void OnPointerUp(PointerEventData eventData)
     {
         inputVector = Vector2.zero;
-        upwardJumpTriggered = false;
 
         if (joystickHandle != null)
         {
