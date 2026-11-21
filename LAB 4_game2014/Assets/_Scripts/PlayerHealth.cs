@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isInvulnerable) return;
 
-        currentHealth -= damage;
+        currentHealth -= damage; //damage for player health
 
         // Trigger Cinemachine Perlin camera shake
         if (CameraShake.Instance != null)
